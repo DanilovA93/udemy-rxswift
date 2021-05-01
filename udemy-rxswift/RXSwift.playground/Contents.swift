@@ -1,26 +1,20 @@
 import UIKit
 import RxSwift
 
-let observable1 = Observable.just(1)
+let disposeBag = DisposeBag()
 
-let observable2 = Observable.of(1, 2, 3)
+let subject = PublishSubject<String>()
 
-let observable3 = Observable.of([1, 2, 3], [3, 4, 5])
+subject.onNext("Issue 1")
 
-let observable4 = Observable.from([1, 2, 3, 4 ,5])
-
-observable4.subscribe { event in
-    if let element = event.element {
-        print(element)
-    }
+subject.subscribe { event in
+    print(event)
+    
 }
 
-observable3.subscribe { event in
-    if let element = event.element {
-        print(element)
-    }
-}
+subject.onNext("Issue 2")
+subject.onNext("Issue 3")
 
-observable4.subscribe(onNext: { element in
-    print(element)
-})
+subject.onCompleted()
+
+subject.onNext("Issue 4")
