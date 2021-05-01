@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		8F582293263DE4AA00D55ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F582296263DE4AA00D55ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F582298263DE4AA00D55ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F640C2E263DEBAF00C29709 /* RXSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RXSwift.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D7421BB47CD462F744E002F6 /* Pods-udemy-rxswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-udemy-rxswift.release.xcconfig"; path = "Target Support Files/Pods-udemy-rxswift/Pods-udemy-rxswift.release.xcconfig"; sourceTree = "<group>"; };
 		EAA505AAADE670548BC47E1D /* Pods-udemy-rxswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-udemy-rxswift.debug.xcconfig"; path = "Target Support Files/Pods-udemy-rxswift/Pods-udemy-rxswift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +72,7 @@
 		8F582289263DE49B00D55ECF /* udemy-rxswift */ = {
 			isa = PBXGroup;
 			children = (
+				8F640C2E263DEBAF00C29709 /* RXSwift.playground */,
 				8F58228A263DE49B00D55ECF /* AppDelegate.swift */,
 				8F58228C263DE49B00D55ECF /* SceneDelegate.swift */,
 				8F58228E263DE49B00D55ECF /* ViewController.swift */,
@@ -88,7 +90,6 @@
 				EAA505AAADE670548BC47E1D /* Pods-udemy-rxswift.debug.xcconfig */,
 				D7421BB47CD462F744E002F6 /* Pods-udemy-rxswift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
