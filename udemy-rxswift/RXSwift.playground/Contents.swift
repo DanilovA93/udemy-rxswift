@@ -3,12 +3,21 @@ import RxSwift
 
 let disposeBag = DisposeBag()
 
-let subject = BehaviorSubject(value: "init value")
+let subject = ReplaySubject<String>.create(bufferSize: 2)
 
-subject.onNext("Last issue")
+subject.onNext("Issue 1")
+subject.onNext("Issue 2")
+subject.onNext("Issue 3")
 
 subject.subscribe { event in
     print(event)
 }
 
-subject.onNext("Issue 1")
+subject.onNext("Issue 4")
+subject.onNext("Issue 5")
+subject.onNext("Issue 6")
+
+print("subscribe #2")
+subject.subscribe { event in
+    print(event)
+}
