@@ -3,18 +3,12 @@ import RxSwift
 
 let disposeBag = DisposeBag()
 
-let subject = PublishSubject<String>()
+let subject = BehaviorSubject(value: "init value")
 
-subject.onNext("Issue 1")
+subject.onNext("Last issue")
 
 subject.subscribe { event in
     print(event)
-    
 }
 
-subject.onNext("Issue 2")
-subject.onNext("Issue 3")
-
-subject.onCompleted()
-
-subject.onNext("Issue 4")
+subject.onNext("Issue 1")
