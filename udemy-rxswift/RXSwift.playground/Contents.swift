@@ -1,9 +1,13 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 let disposeBag = DisposeBag()
 
-let variable = Variable("init value")
-variable.value = "Hello world"
+let relay = BehaviorRelay(value: ["Item 1"])
 
-variable.asObservable().subscribe {print($0)}
+relay.accept(relay.value + ["Item 2"])
+
+relay.asObservable()
+    .subscribe{ print($0)}
+
